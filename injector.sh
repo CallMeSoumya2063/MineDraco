@@ -115,26 +115,12 @@ read -p "App Name: " app
 read -p "Package Name (enter a valid name): " pack
 read -p "Output File Name (include .apk): " out
 
-package="wget"
-
-# Check if wget package is installed
-if dpkg -l | grep -q "^ii  $package "; then
-    echo -e "Package '$package' is installed. Continuing process...\n"
-else
-    echo -e "Package '$package' is not installed. Installing '$package' before continuing.\n"
-    if ! apt install wget -y; then
-        echo -e "Failed to install package '$package'\n"
-        exit 1
-    fi
-    echo -e "Package '$package' has been installed successfully. Continuing process...\n"
-fi
-
 # Check if the injector file already exists then download
 if [ -f "$injector_file" ]; then
     echo -e "Injector file already exists, skipping download.\n"
 else
     echo -e "Downloading injector for '$arch...'\n"
-    wget "$injector_url"
+    curl -o "$injector_file" "$injector_url"
 fi
 
 # Extract the injector
