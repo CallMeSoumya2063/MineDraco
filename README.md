@@ -19,7 +19,7 @@ For everytime after the first run, just `bash injector.sh` is enough. When scrip
 
 # More important info on App name and Package name:
 - App Name: This is what you see on your phone’s screen, like `Minecraft`. While patching, you can input whatever name you want, like `Minecraft Patched` or `Minecraft (Patch)`.
-- Package Name: This is a unique ID used by Android, like `com.mojang.minecraftpe` for Minecraft. While patching, you can input anything like `com.mojang.minecraftpe.patched` or `com.moyang.bugrock.patch`. [**However, keep the structure of the original name (com.mojang.minecraftpe) or game may crash.**]
+- Package Name: This is a unique ID used by Android, like `com.mojang.minecraftpe` for Minecraft. While patching, you can input anything like `com.mojang.minecraftpe.patched` or `com.moyang.bugrock.patch`. **However, keep the structure of the original name (com.mojang.minecraftpe) or game may crash.**
 
 # Note:
 - Make sure you are connected to the internet while running the script.
