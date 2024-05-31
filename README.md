@@ -4,7 +4,7 @@ A user friendly bash script for Termux that automates the whole process of patch
 Made in 1 day with help from chatgpt  (for overall queries because I don't know bash very well) and [devendrn](https://github.com/devendrn) (helped fix an issue, credited him in code)
 
 # How to Use
-1. Download latest script from releases
+1. Download [latest script from releases](https://github.com/CallMeSoumya2063/draco-injector-script/releases/latest)
 2. Put Minecraft apk (make sure it has 'Minecraft' in its name in any way) in Download folder in internal storage
 (Minecraft from Play Store requires an extra step: Antisplit using [Apktool M](https://maximoff.su/apktool/?lang=en) and move produced file to Download in internal storage)
 3. Download and install [termux from GitHub](https://github.com/termux/termux-app/releases/latest)
