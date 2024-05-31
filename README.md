@@ -18,7 +18,8 @@ cp /storage/emulated/0/Download/injector.sh ~ && bash injector.sh
 For everytime after the first run, just `bash injector.sh` is enough. When script is updated, you need to update the script. To update script, download updated script from releases and run the command from step 5. After that, `bash injector.sh` is enough.
 
 # Note:
-You can patch apk for 32bit and 64bit both on any Android device. Just make sure not to use auto-detected architecture and type `arm` (for 32bit) or `aarch64` (for 64bit) before pressing ENTER, during the 30 second time the script lets you manually change architecture.
+- Make sure you are connected to the internet while running the script.
+- You can patch apk for 32bit and 64bit both on any Android device. Just make sure not to use auto-detected architecture and type `arm` (for 32bit) or `aarch64` (for 64bit) before pressing ENTER, during the 30 second time the script lets you manually change architecture.
 
 
 ***Please contribute and post your issues and/or suggestions for further improvements in the project.***
