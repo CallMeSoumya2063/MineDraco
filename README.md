@@ -17,6 +17,10 @@ cp /storage/emulated/0/Download/injector.sh ~ && bash injector.sh
 
 For everytime after the first run, just `bash injector.sh` is enough. When script is updated, you need to update the script. To update script, download updated script from releases and run the command from step 5. After that, `bash injector.sh` is enough.
 
+# More important info on App name and Package name:
+- App Name: This is what you see on your phone’s screen, like `Minecraft`. While patching, you can input whatever name you want, like `Minecraft Patched` or `Minecraft (Patch)`.
+- Package Name: This is a unique ID used by Android, like `com.mojang.minecraftpe` for Minecraft. While patching, you can input anything like `com.mojang.minecraftpe.patched` or `com.moyang.bugrock.patch`. [**However, keep the structure of the original name (com.mojang.minecraftpe) or game may crash.**]
+
 # Note:
 - Make sure you are connected to the internet while running the script.
 - You can patch apk for 32bit and 64bit both on any Android device. Just make sure not to use auto-detected architecture and type `arm` (for 32bit) or `aarch64` (for 64bit) before pressing ENTER, during the 30 second time the script lets you manually change architecture.
