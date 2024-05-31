@@ -6,7 +6,7 @@ Made in 1 day with help from chatgpt  (for overall queries because I don't know 
 # How to Use
 1. Download latest script from releases
 2. Put Minecraft apk (make sure it has 'Minecraft' in its name in any way) in Download folder in internal storage
-(Minecraft from Play Store requires an extra step: Antisplit using Apktool M and move produced file to Download in internal storage)
+(Minecraft from Play Store requires an extra step: Antisplit using [Apktool M](https://maximoff.su/apktool/?lang=en) and move produced file to Download in internal storage)
 3. Download and install [termux from GitHub](https://github.com/termux/termux-app/releases/latest)
 4. Give storage permission to manually from app settings. (For first time termux users)
 5. Run this command: (For first time using the script)
