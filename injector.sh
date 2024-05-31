@@ -11,6 +11,24 @@ fi
 # Determine device architecture
 arch=$(uname -m)
 
+# Allow user to manually set architecture for 30 seconds
+echo -e "\nDetected architecture: '$arch'. You have 30 seconds to use architecture other than '$arch' (aarch64 or arm), or press ENTER to continue with detected architecture.\n"
+while true; do
+    read -t 30 -p "Enter architecture or press ENTER: " manual_arch
+
+    if [[ -z "$manual_arch" ]]; then
+        echo -e "\n\nNo architecture entered, continuing with detected architecture.\n"
+        break
+    elif [[ "$manual_arch" == "aarch64" || "$manual_arch" == "arm" ]]; then
+        echo -e "\nWarning: Manually changing architecture can lead to compatibility issues."
+        arch=$manual_arch
+        echo -e "\nArchitecture manually set to $arch"
+        break
+    else
+        echo -e "Invalid architecture entered, try again.\n"
+    fi
+done
+
 # Define download URLs based on architecture
 case "$arch" in
     aarch64)
@@ -26,24 +44,6 @@ case "$arch" in
         exit 1
         ;;
 esac
-
-# Allow user to manually set architecture for 30 seconds
-echo -e "\nDetected architecture: '$arch'. You have 30 seconds to use architecture other than '$arch' (aarch64 or arm), or press ENTER to continue with detected architecture.\n"
-while true; do
-    read -t 30 -p "Enter architecture or press ENTER: " manual_arch
-
-    if [[ -z "$manual_arch" ]]; then
-        echo -e "\n\nNo architecture entered, continuing with detected architecture.\n"
-        break
-    elif [[ "$manual_arch" == "aarch64" || "$manual_arch" == "arm" ]]; then
-        echo "\nWarning: Manually changing architecture can lead to compatibility issues.\n"
-        arch=$manual_arch
-        echo "\nArchitecture manually set to $arch"
-        break
-    else
-        echo "Invalid architecture entered, try again.\n"
-    fi
-done
 
 # Function to ask user about architecture
 ask_user_about_architecture() {
