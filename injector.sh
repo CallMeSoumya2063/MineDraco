@@ -120,7 +120,7 @@ if [ -f "$injector_file" ]; then
     echo -e "Injector file already exists, skipping download.\n"
 else
     echo -e "Downloading injector for '$arch...'\n"
-    curl -o "$injector_file" "$injector_url"
+    curl -L -o "$injector_file" "$injector_url"
 fi
 
 # Extract the injector
