@@ -63,7 +63,7 @@ ask_user_about_architecture() {
                             break 2
                             ;;
                         [Nn][Oo]|[Nn])
-                            echo -e "Abort.\n"
+                            echo -e "Stopping process...\n"
                             exit 1
                             ;;
                         * )
@@ -85,7 +85,7 @@ ask_user_about_architecture
 # Update and upgrade packages
 apt update -y && apt upgrade -y
 
-echo -e "\nSearching for all Minecraft APK files in storage/emulated/0/Download, this may take some time...\n\nPlease enter the number of the desired file after you see a list!\n"
+echo -e "\nSearching for all Minecraft APK files in storage/emulated/0/Download, this may take some time...\n\n"
 
 # Magical bash boogaloo to find all APK files having "Minecraft" (case insensitive) in file name, thanks @devendrn
 files=()
@@ -93,15 +93,16 @@ while IFS= read -r filename; do
   files+=("$filename")
 done < <(find /storage/emulated/0/Download -type f -iname '*minecraft*.apk')
 if [ ${#files[@]} -eq 0 ]; then
-    echo -e "No APK files with 'Minecraft' in the name found.\n"
+    echo -e "No APK files with 'Minecraft' in the name found.\nMake sure you have an APK in /storage/emulated/0/Download that has the word 'Minecraft' in filename.\nError found, stopping process...\n"
+    exit 1
 elif [ ${#files[@]} -eq 1 ]; then
     selected_file="${files[0]}"
-    echo -e "Found one APK file: $selected_file\n"
+    echo -e "Found only one APK file: $selected_file\nUsing the only auto-detected file for patching...\n"
 else
-    echo -e "\nMultiple APK files found:"
+    echo -e "\nMultiple APK files found!\nPlease enter the number beside the APK file you want to use:"
     select selected_file in "${files[@]}"; do
         if [ -n "$selected_file" ]; then
-            echo -e "\nSelected APK file: $selected_file\n"
+            echo -e "\nSelected APK file: $selected_file\nUsing chosen file for patching...\n"
             break
         else
             echo -e "Invalid selection. Please try again.\n"
