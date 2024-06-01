@@ -56,6 +56,7 @@ ask_user_about_architecture() {
                 ;;
             [Nn][Oo]|[Nn])
                 while true; do
+                    echo -e "\n"
                     read -p "Same architecture on device and in APK file gives best compatibility and performance. Are you sure you still wish to continue? (reply yes or no) " confirm
                     case "$confirm" in
                         [Yy][Ee][Ss]|[Yy])
@@ -67,7 +68,7 @@ ask_user_about_architecture() {
                             exit 1
                             ;;
                         * )
-                            echo -e "\nPlease answer yes or no.\n"
+                            echo -e "\nPlease answer yes or no."
                             ;;
                     esac
                 done
