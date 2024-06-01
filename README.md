@@ -7,11 +7,14 @@ Made in 1 day with help from chatgpt  (for overall queries because I don't know 
 1. Put Minecraft apk (make sure it has 'Minecraft' in its name in any way) in Download folder in internal storage
 > *Minecraft from Play Store requires an extra step: Antisplit using [Apktool M](https://maximoff.su/apktool/?lang=en) and then move produced file to Download folder in internal storage*
 2. Download and install [termux from GitHub](https://github.com/termux/termux-app/releases/latest)
-3. Run this command: (For first time using the script)
+3. Paste this command in Termux and press ENTER to run the script: (For first time using the script)
 ```
 curl -o injector.sh https://raw.githubusercontent.com/CallMeSoumya2063/draco-injector-script/main/injector.sh && bash injector.sh
 ```
-4. Read instructions on screen and follow.
+4. Read instructions on screen and follow (pressing ENTER accepts your inputs).
+
+> [!IMPORTANT]
+> Patched APK made by this script only loads shader from Global Resources, and the APK may be buggy or unstable on some devices. Please report APK issues [here](https://github.com/mcbegamerxx954/draco-injector/issues) and mention you used my script for patching.
 
 > [!NOTE]
 > Make sure you are connected to the internet while running the script. For everytime after the first run, just `bash injector.sh` is enough. When script is updated, you need to update the script. To run updated script, run the command from step 3. After that, `bash injector.sh` is enough.
