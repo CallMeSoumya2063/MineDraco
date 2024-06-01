@@ -64,7 +64,7 @@ ask_user_about_architecture() {
                             break 2
                             ;;
                         [Nn][Oo]|[Nn])
-                            echo -e "Stopping process...\n"
+                            echo -e "\nStopping process...\n"
                             exit 1
                             ;;
                         * )
