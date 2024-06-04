@@ -60,7 +60,7 @@ elif [ ${#files[@]} -eq 1 ]; then
     selected_file="${files[0]}"
     echo -e "Found only one APK file: $selected_file\n\nUsing the only auto-detected file for patching..."
 else
-    echo -e "\nMultiple APK files found!\nPlease enter the number beside the APK file you want to use:"
+    echo -e "Multiple APK files found!\nPlease enter the number beside the APK file you want to use:"
     select selected_file in "${files[@]}"; do
         if [ -n "$selected_file" ]; then
             echo -e "\nSelected APK file: $selected_file\n\nUsing chosen file for patching..."
