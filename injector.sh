@@ -3,7 +3,7 @@
 # Setup storage permission for Termux if necessary
 directory="$HOME/storage"
 if [ -d "$directory" ]; then
-    echo -e "\nTermux's storage is already setup, skipping storage setup.\n"
+    echo -e "\nTermux's storage is already setup, skipping storage setup."
 else
     termux-setup-storage
 fi
