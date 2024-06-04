@@ -31,11 +31,16 @@ case "$arch" in
         ;;
 esac
 
+width=$(tput cols)
+printf '%*s\n' "$width" '' | tr ' ' '-'
+
 # Get important patch info
 echo -e "Please enter the following info about Patched Minecraft here...\n"
 read -p "App Name: " app
 read -p "Package Name (enter a valid name): " pack
 read -p "Output File Name (include .apk): " out
+
+printf '%*s\n' "$width" '' | tr ' ' '-'
 
 echo -e "\nSearching for all Minecraft APK files in storage/emulated/0/Download, this may take some time...\n\n"
 
@@ -62,6 +67,8 @@ else
     done
 fi
 
+printf '%*s\n' "$width" '' | tr ' ' '-'
+
 # Check if the injector file already exists then download
 if [ -f "$injector_file" ]; then
     echo -e "Injector file already exists, skipping download.\n"
@@ -73,6 +80,7 @@ fi
 # Extract the injector
 echo -e "Extracting the injector...\n"
 tar xvzf "$injector_file"
+printf '%*s\n' "$width" '' | tr ' ' '-'
 
 # Run the injector
 if ! ./injector "$selected_file" -a "$app" -p "$pack" -o "$out"; then
@@ -84,5 +92,7 @@ fi
 mv "$out" /storage/emulated/0/Download
 
 # Done, exit
+printf '%*s\n' "$width" '' | tr ' ' '-'
 echo -e "\nPatched Minecraft APK created successfully in Download folder.\n"
+printf '%*s\n' "$width" '' | tr ' ' '-'
 exit 0
