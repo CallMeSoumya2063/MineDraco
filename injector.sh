@@ -63,7 +63,7 @@ else
     echo -e "\nMultiple APK files found!\nPlease enter the number beside the APK file you want to use:"
     select selected_file in "${files[@]}"; do
         if [ -n "$selected_file" ]; then
-            echo -e "\nSelected APK file: $selected_file\n\nUsing chosen file for patching...\n"
+            echo -e "\nSelected APK file: $selected_file\n\nUsing chosen file for patching..."
             break
         else
             echo -e "Invalid selection. Please try again.\n"
