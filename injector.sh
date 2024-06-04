@@ -45,7 +45,7 @@ read -p "Output File Name (include .apk): " out
 
 printf '%*s\n' "$width" '' | tr ' ' '-'
 
-echo -e "Searching for all Minecraft APK files in storage/emulated/0/Download, this may take some time...\n"
+echo -e "Searching for all Minecraft APK files in storage/emulated/0/Download, this may take some time..."
 
 # Magical bash boogaloo to find all APK files having "Minecraft" (case insensitive) in file name, thanks @devendrn
 files=()
