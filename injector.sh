@@ -62,20 +62,6 @@ else
     done
 fi
 
-package="curl"
-
-# Check if curl is installed, install if necessary
-if dpkg -l | grep -q "^ii  $package "; then
-    echo -e "Package '$package' is installed. Continuing process...\n"
-else
-    echo -e "Package '$package' is not installed. Installing '$package' before continuing.\n"
-    if ! apt install curl -y; then
-        echo -e "Failed to install package '$package'\n"
-        exit 1
-    fi
-    echo -e "Package '$package' has been installed successfully. Continuing process...\n"
-fi
-
 # Check if the injector file already exists then download
 if [ -f "$injector_file" ]; then
     echo -e "Injector file already exists, skipping download.\n"
