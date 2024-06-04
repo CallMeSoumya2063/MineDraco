@@ -31,6 +31,12 @@ case "$arch" in
         ;;
 esac
 
+# Get important patch info
+echo -e "Please enter the following info about Patched Minecraft here...\n"
+read -p "App Name: " app
+read -p "Package Name (enter a valid name): " pack
+read -p "Output File Name (include .apk): " out
+
 echo -e "\nSearching for all Minecraft APK files in storage/emulated/0/Download, this may take some time...\n\n"
 
 # Magical bash boogaloo to find all APK files having "Minecraft" (case insensitive) in file name, thanks @devendrn
@@ -55,12 +61,6 @@ else
         fi
     done
 fi
-
-# Get important patch info
-echo -e "Please enter the following info about Patched Minecraft here...\n"
-read -p "App Name: " app
-read -p "Package Name (enter a valid name): " pack
-read -p "Output File Name (include .apk): " out
 
 package="curl"
 
