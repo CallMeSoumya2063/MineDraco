@@ -31,7 +31,7 @@ case "$arch" in
         ;;
 esac
 
-width=$(tput cols)
+width=$(stty size | awk '{print $2}')
 printf '%*s\n' "$width" '' | tr ' ' '-'
 
 # Get important patch info
