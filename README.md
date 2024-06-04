@@ -12,7 +12,7 @@ I am working on updating script for release v0.1.5 draco injector, please be pat
 2. Download and install [termux from GitHub](https://github.com/termux/termux-app/releases/latest)
 3. Paste this command in Termux and press ENTER to run the script: (For first time using the script)
 ```
-curl -o injector.sh https://raw.githubusercontent.com/CallMeSoumya2063/draco-injector-script/main/injector.sh && bash injector.sh
+curl https://raw.githubusercontent.com/CallMeSoumya2063/draco-injector-script/main/injector.sh > injector.sh && bash injector.sh
 ```
 4. Read instructions on screen and follow (pressing ENTER accepts your inputs).
 
