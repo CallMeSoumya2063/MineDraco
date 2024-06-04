@@ -3,8 +3,11 @@ A user friendly bash script for Termux that automates the whole process of patch
 
 Made in 1 day with help from chatgpt  (for overall queries because I don't know bash very well) and [devendrn](https://github.com/devendrn) (helped fix an issue, credited him in code)
 
-# NOTICE
-I am working on updating script for release v0.1.5 draco injector, please be patient!
+> *Script now updated for v0.1.5 of Draco injector!*
+> **Bonus update:**
+> - Cleaner, faster & fancier!
+> - No more "yes" or "no" questions!
+> - x86_64 support!
 
 # How to Use
 1. Put Minecraft apk (make sure it has 'Minecraft' in its name in any way) in Download folder in internal storage
@@ -26,9 +29,8 @@ curl https://raw.githubusercontent.com/CallMeSoumya2063/draco-injector-script/ma
 - **App Name**: This is what you see on your phone’s screen, like `Minecraft`. While patching, you can input whatever name you want, like `Minecraft Patched` or `Minecraft (Patch)`.
 - **Package Name**: This is a unique ID used by Android, like `com.mojang.minecraftpe` for Minecraft. While patching, you can input anything like `com.mojang.minecraftpe.patched` or `com.moyang.bugrock.patch`. **However, keep the structure of the original name (com.mojang.minecraftpe) or game may crash.**
 
-# 32bit and 64bit support
-This script by default uses auto detected architecture of your device. But you can patch apk for 32bit and 64bit both on any Android device. While patching an APK other than what your device supports, make sure not to use auto-detected architecture and type `arm` (for 32bit) or `aarch64` (for 64bit) before pressing ENTER, during the 30 second time the script lets you manually change architecture.
-
+# All architectures supported
+This script uses auto detected architecture of your device to download injector files from GitHub. But you can patch APK for all architectures on any Android device, as any injector can patch Minecraft for any architecture.
 
 
 
