@@ -25,16 +25,16 @@ arch=$(uname -m)
 # Define download URLs based on architecture
 case "$arch" in
     aarch64)
-        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.5/injector-aarch64-linux-android.tar.gz"
-        injector_file="v0.1.5_injector-aarch64-linux-android.tar.gz"
+        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-aarch64-linux-android.tar.gz"
+        injector_file="v0.1.6_injector-aarch64-linux-android.tar.gz"
         ;;
     armv7l | arm)
-        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.5/injector-armv7-linux-androideabi.tar.gz"
-        injector_file="v0.1.5_injector-armv7-linux-androideabi.tar.gz"
+        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-armv7-linux-androideabi.tar.gz"
+        injector_file="v0.1.6_injector-armv7-linux-androideabi.tar.gz"
         ;;
     x86_64)
-        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.5/injector-x86_64-unknown-linux-gnu.tar.gz"
-        injector_file="v0.1.5_injector-x86_64-unknown-linux-gnu.tar.gz"
+        injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/v0.1.6/injector-x86_64-unknown-linux-gnu.tar.gz"
+        injector_file="v0.1.6_injector-x86_64-unknown-linux-gnu.tar.gz"
         ;;
     *)
         echo "${RED}Unsupported architecture:${RESET} ${MAGENTA}$arch${RESET}"
