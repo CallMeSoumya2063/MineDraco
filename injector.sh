@@ -23,21 +23,21 @@ width=$(stty size | awk '{print $2}')
 arch=$(uname -m)
 
 # Define injector version to use during patching
-injector_ver="0.1.6"
+injector_ver="v0.1.6"
 
 # Define download URLs based on architecture
 case "$arch" in
     aarch64)
         injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/$injector_ver/injector-aarch64-linux-android.tar.gz"
-        injector_file="v$injector_ver-injector-aarch64-linux-android.tar.gz"
+        injector_file="$injector_ver-injector-aarch64-linux-android.tar.gz"
         ;;
     armv7l | arm)
         injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/$injector_ver/injector-armv7-linux-androideabi.tar.gz"
-        injector_file="v$injector_ver-injector-armv7-linux-androideabi.tar.gz"
+        injector_file="$injector_ver-injector-armv7-linux-androideabi.tar.gz"
         ;;
     x86_64)
         injector_url="https://github.com/mcbegamerxx954/draco-injector/releases/download/$injector_ver/injector-x86_64-unknown-linux-gnu.tar.gz"
-        injector_file="v$injector_ver-injector-x86_64-unknown-linux-gnu.tar.gz"
+        injector_file="$injector_ver-injector-x86_64-unknown-linux-gnu.tar.gz"
         ;;
     *)
         echo "${RED}Unsupported architecture:${RESET} ${MAGENTA}$arch${RESET}"
@@ -86,9 +86,9 @@ printf '%*s\n' "$width" '' | tr ' ' '-'
 
 # Check if the injector file already exists then download
 if [ -f "$injector_file" ]; then
-    echo -e "${GREEN}Injector file for v$injector_ver already exists, skipping download.${RESET}\n"
+    echo -e "${GREEN}Injector file for $injector_ver already exists, skipping download.${RESET}\n"
 else
-    echo -e "${BLUE}Downloading injector file v$injector_ver for ${RESET}${MAGENTA}$arch${RESET}${BLUE}...${RESET}\n"
+    echo -e "${BLUE}Downloading injector file $injector_ver for ${RESET}${MAGENTA}$arch${RESET}${BLUE}...${RESET}\n"
     curl -L -o "$injector_file" "$injector_url"
 fi
 
