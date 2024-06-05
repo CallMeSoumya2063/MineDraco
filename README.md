@@ -3,7 +3,7 @@ A user friendly bash script for Termux that automates the whole process of patch
 
 Made in 1 day with help from chatgpt  (for overall queries because I don't know bash very well) and [devendrn](https://github.com/devendrn) (helped fix an issue, credited him in code)
 
-> *Script now updated for v0.1.5 of Draco injector!*
+> *Script now updated for v0.1.6 of Draco injector!*
 > 
 > **Bonus update:**
 > - Cleaner, faster & fancier!
