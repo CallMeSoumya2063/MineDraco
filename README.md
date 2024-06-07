@@ -33,6 +33,8 @@ curl https://raw.githubusercontent.com/CallMeSoumya2063/draco-injector-script/ma
 # All architectures supported
 This script uses auto detected architecture of your device to download injector files from GitHub. But you can patch APK for all architectures on any Android device, as any injector can patch Minecraft for any architecture.
 
+> [!TIP]
+> If the patched APK of your Minecraft from Play Store version is showing this:![1000383841](https://github.com/CallMeSoumya2063/draco-injector-script/assets/81620896/1404689d-f693-4134-b34b-70b93af101c5) then contact me at my discord `@callmesoumya` for the fix. Please don't spam or abuse the DMs.
 
 
 
