@@ -30,7 +30,7 @@ curl https://raw.githubusercontent.com/CallMeSoumya2063/MineDraco/main/injector.
 - **App Name**: This is what you see on your phone’s screen, like `Minecraft`. While patching, you can input whatever name you want, like `Minecraft Patched` or `Minecraft (Patch)`.
 - **Package Name**: This is a unique ID used by Android, like `com.mojang.minecraftpe` for Minecraft. While patching, you can input anything like `com.mojang.minecraftpe.patched` or `com.moyang.bugrock.patch`. **However, keep the structure of the original name (com.mojang.minecraftpe) or game may crash.**
 
-## All architectures supported
+## 💿 All architectures supported
 This script uses auto detected architecture of your device to download injector files from GitHub. But you can patch APK for all architectures on any Android device, as any injector can patch Minecraft for any architecture.
 
 > [!TIP]
