@@ -21,10 +21,10 @@ curl https://raw.githubusercontent.com/CallMeSoumya2063/MineDraco/main/injector.
 4. Read instructions on screen and follow (pressing ENTER accepts your inputs).
 
 > [!IMPORTANT]
-> Patched APK made by this script only loads shader from Global Resources, and the APK may be buggy or unstable on some devices. Please report APK issues [here](https://github.com/mcbegamerxx954/draco-injector/issues) and mention you used my script for patching.
+> Patched APK made by this script only loads shader from Global Resources, and the APK may be buggy or unstable on some devices. Please report APK issues [here](https://github.com/mcbegamerxx954/draco-injector/issues) and mention you used MineDraco for patching.
 
 > [!NOTE]
-> Make sure you are connected to the internet while running the script. For everytime after the first run, just `bash injector.sh` is enough. When script is updated, you need to update the script. To run updated script, run the command from step 3. After that, `bash injector.sh` is enough.
+> Make sure you are connected to the internet while running the script. For everytime after the first run, just `bash MineDraco.sh` is enough. When script is updated, you need to update the script. To run updated script, run the command from step 3. After that, `bash MineDraco.sh` is enough.
 
 # More important info on App name and Package name:
 - **App Name**: This is what you see on your phone’s screen, like `Minecraft`. While patching, you can input whatever name you want, like `Minecraft Patched` or `Minecraft (Patch)`.
