@@ -23,7 +23,7 @@ width=$(stty size | awk '{print $2}')
 arch=$(uname -m)
 
 # Define injector version to use during patching
-injector_ver="v0.1.6"
+injector_ver="v0.1.7"
 
 # Define download URLs based on architecture
 case "$arch" in
