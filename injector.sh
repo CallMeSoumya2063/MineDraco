@@ -25,7 +25,7 @@ case "$arch" in
         injector_url="$url_const/$injector_ver/injector-aarch64-linux-android.tar.gz"
         injector_file="$injector_ver-injector-aarch64-linux-android.tar.gz"
         ;;
-    armv7l | arm | armv8l)
+    armv7l | arm | armv8l | arm32)
         injector_url="$url_const/$injector_ver/injector-armv7-linux-androideabi.tar.gz"
         injector_file="$injector_ver-injector-armv7-linux-androideabi.tar.gz"
         ;;
