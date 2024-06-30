@@ -5,10 +5,11 @@ Made in 1 day with help from chatgpt  (for overall queries because I don't know 
 
 > *Script now updated for **v0.1.7** of Draco injector!*
 > 
-> **Bonus update:**
-> - Cleaner, faster & fancier!
-> - No more "yes" or "no" questions!
-> - x86_64 support!
+> **Latest Changes:**
+> - A lot of 'Quality of Life' improvements
+> - Added a few helpful tips
+> - Better error handling
+> - Armv8l support added
 
 ## 🛠️ How to Use
 1. Put Minecraft apk (make sure it has 'Minecraft' in its name in any way) in Download folder in internal storage
@@ -30,8 +31,12 @@ curl https://raw.githubusercontent.com/CallMeSoumya2063/MineDraco/main/injector.
 - **App Name**: This is what you see on your phone’s screen, like `Minecraft`. While patching, you can input whatever name you want, like `Minecraft Patched` or `Minecraft (Patch)`.
 - **Package Name**: This is a unique ID used by Android, like `com.mojang.minecraftpe` for Minecraft. While patching, you can input anything like `com.mojang.minecraftpe.patched` or `com.moyang.bugrock.patch`. **However, keep the structure of the original name (com.mojang.minecraftpe) or game may crash.**
 
-## 💿 All architectures supported
+## 💿 Wide-range of architectures supported
 This script uses auto detected architecture of your device to download injector files from GitHub. But you can patch APK for all architectures on any Android device, as any injector can patch Minecraft for any architecture.
+As of latest changes, the supported architectures are:
+- **aarch64** or **arm64** (64bit arm : mostly found in all modern Android devices)
+- **arm32** (32bit arm : found in older Android devices)
+- **x86_64** (64bit x86 : found mostly in some Chromebooks and PC/Laptop hardware)
 
 > [!TIP]
 > If the patched APK of your Minecraft from Play Store version is showing this:![1000383841](https://github.com/CallMeSoumya2063/draco-injector-script/assets/81620896/1404689d-f693-4134-b34b-70b93af101c5) then contact me at my discord `@callmesoumya` for the fix. Please don't spam or abuse the DMs.
