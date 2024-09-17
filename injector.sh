@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define injector version to use during patching
-injector_ver="v0.1.8"
+injector_ver="v0.1.7"
 
 # Define color variables
 RED='\e[31m'
