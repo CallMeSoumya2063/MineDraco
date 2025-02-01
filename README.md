@@ -3,7 +3,7 @@ A user friendly bash script for Termux that automates the whole process of patch
 
 Made in 1 day with help from chatgpt  (for overall queries because I don't know bash very well) and [devendrn](https://github.com/devendrn) (helped fix an issue, credited him in code)
 
-> *Script is now rolled back to **v0.1.7** of Draco injector to avoid issues with latest version of injector.*
+> *Script is back to using **v0.1.8** of Draco injector, as that version seems to work better in newer Minecraft versions.*
 > 
 > **Latest Changes:**
 > - A lot of 'Quality of Life' improvements
