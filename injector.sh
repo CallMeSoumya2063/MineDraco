@@ -54,7 +54,8 @@ separate
 echo -e "${YELLOW}Please enter the following info about Patched Minecraft here...${RESET}\n"
 read -p "App Name: " app
 read -p "Package Name (enter a valid name): " pack
-read -p "Output File Name (include .apk): " out
+read -p "Output APK File Name: " out
+out="${out%.apk}.apk"
 separate
 
 echo -e "${BLUE}Searching for all Minecraft APK files in storage/emulated/0/Download, this may take some time...${RESET}"
