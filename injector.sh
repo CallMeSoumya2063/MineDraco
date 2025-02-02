@@ -129,7 +129,7 @@ if ./injector "$selected_file" -a "$app" -p "$pack" -o "$out"; then
 else
     separate
     rm "$out"
-    echo -e "${RED}Patching process failed!${RESET}\n\n${YELLOW}TIP${RESET}: Try running the script again!\n\nIf it failed due to ${MAGENTA}'os error 17'${RESET} then it should work the next time.\nIf it failed due to ${MAGENTA}'Unaligned sh_offset value'${RESET} then report the issue in Draco Injector GitHub repo by mcbegamerxx954.\n\n${RED}Error found, stopping patching process...${RESET}"
+    echo -e "\e[1;31mPatching process failed!${RESET}\n\n${YELLOW}TIP${RESET}: Try running the script again!\n\nIf it failed due to ${MAGENTA}'os error 17'${RESET} then it should work the next time.\nIf it failed due to ${MAGENTA}'Unaligned sh_offset value'${RESET} then report the issue in Draco Injector GitHub repo by mcbegamerxx954.\n\n${RED}Error found, stopping patching process...${RESET}"
     separate
     exit 1
 fi
