@@ -114,7 +114,7 @@ fi
 if ./injector "$selected_file" -a "$app" -p "$pack" -o "$out"; then
     mv "$out" /storage/emulated/0/Download
     separate
-    echo -e "${GREEN}Patched Minecraft APK created successfully in Download folder.${RESET}"
+    echo -e "\e[1;32mPatched Minecraft APK created successfully in your Download folder, with file name \'$out\'.\nInstall the APK file from a file manager.${RESET}"
     separate
 else
     separate
