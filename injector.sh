@@ -115,6 +115,7 @@ if ./injector "$selected_file" -a "$app" -p "$pack" -o "$out"; then
     mv "$out" /storage/emulated/0/Download
     separate
     echo -e "\e[1;32mPatched Minecraft APK created successfully in your Download folder, with file name \'$out\'.${RESET}\n${GREEN}Installing the APK file...${RESET}"
+    sleep 1
     termux-open /storage/emulated/0/Download/$out
     separate
 else
