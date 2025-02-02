@@ -53,7 +53,15 @@ separate
 # Get important patch info
 echo -e "${YELLOW}Please enter the following info about Patched Minecraft here...${RESET}\n"
 read -p "App Name: " app
-read -p "Package Name (enter a valid name): " pack
+read -p "Package Name: " pack
+
+# Validate the package name using regex
+regex='^[A-Za-z][A-Za-z0-9]*(\.[A-Za-z][A-Za-z0-9]*)+$'
+while ! [[ $pack =~ $regex ]]; do
+    echo -e "${RED}Invalid package name. Please enter a valid package name.${RESET}"
+    read -p "Package Name (enter a valid name): " pack
+done
+
 read -p "Output APK File Name: " out
 out="${out%.apk}.apk"
 separate
