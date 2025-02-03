@@ -88,15 +88,12 @@ elif [ ${#files[@]} -eq 1 ]; then
     echo -e "${YELLOW}Found only one APK file:${RESET} ${MAGENTA}$selected_file${RESET}\n\nUsing the only auto-detected file for patching..."
 else
     echo -e "\n${YELLOW}Multiple APK files found!${RESET}"
-    # Print files with custom numbering (starting from 1 in square brackets)
     for i in "${!files[@]}"; do
         printf "${YELLOW}[%d]${RESET} %s\n" "$((i+1))" "${files[$i]}"
     done
-    # Custom prompt for selection
     while true; do
         echo -ne "\n${BLUE}[?]${RESET} ${YELLOW}Please enter the number beside the APK file you want to use:${RESET} "
         read -r selection
-        # Validate: selection must be a number and within 1..length
         if [[ $selection =~ ^[0-9]+$ ]] && [ "$selection" -ge 1 ] && [ "$selection" -le "${#files[@]}" ]; then
             selected_file="${files[$((selection-1))]}"
             echo -e "\n${BLUE}Selected APK file:${RESET} ${MAGENTA}$selected_file${RESET}\n\nUsing chosen file for patching..."
