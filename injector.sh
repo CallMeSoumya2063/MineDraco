@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ensure that the script is running in Termux
+[ -z "$TERMUX_VERSION" ] && echo -e "Termux not detected !!" && exit 1
+
 # Define injector version to use during patching
 injector_ver="v0.1.8"
 
