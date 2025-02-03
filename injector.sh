@@ -44,6 +44,9 @@ case "$arch" in
 esac
 separate
 
+# Install fd package for fast file search
+yes | pkg install fd
+
 # Setup storage permission for Termux if necessary
 directory="$HOME/storage"
 if [ -d "$directory" ]; then
@@ -74,11 +77,8 @@ separate
 
 echo -e "${BLUE}Searching for all Minecraft APK files in storage/emulated/0/Download, this may take some time...${RESET}"
 
-# Magical bash boogaloo to find all APK files having "Minecraft" (case insensitive) in file name, thanks @devendrn
-files=()
-while IFS= read -r filename; do
-  files+=("$filename")
-done < <(find /storage/emulated/0/Download -type f -iname '*minecraft*.apk')
+# Faster approach to find all APK files having "Minecraft" (case insensitive) in file name, thanks @devendrn for the old one
+readarray -d '' files < <(fd -0 -i -t f -e apk 'minecraft' /storage/emulated/0/Download)
 if [ ${#files[@]} -eq 0 ]; then
     echo -e "${RED}No APK files with 'Minecraft' in the name found.${RESET}\n\n${YELLOW}TIP${RESET}: Make sure you have an APK in /storage/emulated/0/Download that has the word 'Minecraft' in filename.\n\n${RED}Error found, stopping patching process...${RESET}"
     separate
