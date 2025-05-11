@@ -72,7 +72,7 @@ while true; do
 done
 
 read -p "Output APK File Name: " out
-out="${out%.apk}.apk"
+out=${out%.apk}.apk
 separate
 
 echo -e "${BLUE}Searching for all Minecraft APK files in storage/emulated/0/Download, this may take some time...${RESET}"
